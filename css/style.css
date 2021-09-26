@@ -124,5 +124,12 @@ header {
 .service-item {
   box-shadow: 0 0 0.2rem 0.1rem rgb(223, 223, 223);
   padding: 2rem;
+  text-align: center;
+}
+.service-item .paragraph {
+  text-align: left;
+}
+.service-icon {
+  font-size: 3rem;
 }
 /* Service-section-end */
