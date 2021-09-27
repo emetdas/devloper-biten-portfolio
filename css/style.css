@@ -102,6 +102,72 @@ header {
 .nav_link {
   padding: 0.4rem 1rem;
 }
+.menu_icon {
+  width: 4rem;
+  height: 4rem;
+  right: 2rem;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+.menu_icon .menu_icon_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.icon-line {
+  width: 100%;
+  height: 0.3rem;
+  background: var(--text-dark);
+}
+.icon-line::before,
+.icon-line::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 0.3rem;
+  background: var(--text-dark);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.icon-line::before {
+  transform: translateY(-1rem);
+}
+.icon-line::after {
+  transform: translateY(1rem);
+}
+.menu_icon_box.active .icon-line {
+  background: transparent;
+}
+.menu_icon_box.active .icon-line::before {
+  transform: rotate(45deg);
+}
+.menu_icon_box.active .icon-line::after {
+  transform: rotate(130deg);
+}
+@media (max-width: 768px) {
+  .nav_menu {
+    display: none;
+    transition: all 0.5s ease;
+  }
+  .menu_icon {
+    display: block;
+  }
+  .nav_menu.active {
+    display: block;
+    position: absolute;
+    top: var(--nav);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--nav));
+    background: #fff;
+  }
+  .nav_menu.active .nav_list {
+    display: block;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+}
 .home {
   max-height: 67rem;
   height: 100vh;
@@ -114,22 +180,63 @@ header {
 /* Home-section-end */
 /* Service-section-start */
 .service {
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 .service-items {
   padding-top: 3rem;
   gap: 1.3rem;
   grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
 }
+@media (max-width: 400px) {
+  .service-items {
+    grid-template-columns: 1fr;
+  }
+}
 .service-item {
   box-shadow: 0 0 0.2rem 0.1rem rgb(223, 223, 223);
   padding: 2rem;
   text-align: center;
 }
+.service-item * {
+  padding: 1rem 0;
+}
 .service-item .paragraph {
   text-align: left;
 }
+.service-heading {
+  position: relative;
+}
+.service-heading::after {
+  position: absolute;
+  content: '';
+  left: 50%;
+  bottom: -0.2rem;
+  width: 10rem;
+  transform: translateX(-50%);
+  height: 0.3rem;
+  background: var(--bg-primary);
+}
 .service-icon {
   font-size: 3rem;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  line-height: 4rem;
+  background: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(235, 235, 235, 0.452);
+}
+
+.fa-laptop {
+  color: hsl(241, 78%, 73%);
+}
+.fa-php {
+  color: hsl(229, 29%, 64%);
+}
+.fa-figma {
+  color: var(--bg-primary);
+}
+.fa-video {
+  color: hsl(7, 87%, 58%);
 }
 /* Service-section-end */
