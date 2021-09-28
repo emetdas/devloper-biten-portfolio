@@ -254,6 +254,14 @@ header {
 .skill {
   padding: 4rem 0;
 }
+
+.skill-container {
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+}
+.skill-img {
+  width: 100%;
+}
 .progress {
   max-width: 32rem;
   width: 100%;
@@ -274,7 +282,7 @@ header {
   background: var(--primary);
   border-radius: inherit;
   position: relative;
-  /* transition: all 5s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+  transition: all 5s linear;
 }
 .progress-inner::before {
   position: absolute;

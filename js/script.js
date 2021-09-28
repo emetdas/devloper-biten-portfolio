@@ -21,6 +21,5 @@ let progress = document.querySelectorAll('.progress-inner');
 progress.forEach((e) => {
   let { progress } = e.dataset;
   e.style.width = progress;
-  // e.style.overflow = 'visible';
 });
 // skill-prigress-end
