@@ -18,6 +18,7 @@
   --primary: hsl(257, 81%, 58%);
   --bg-primary: hsl(241, 76%, 63%);
   --white: hsl(0, 0%, 100%);
+  --leight: hsl(0, 0%, 95%);
   --container: 150rem;
   --nav: 6rem;
   --m-auto: 0 auto;
@@ -249,3 +250,53 @@ header {
   color: hsl(7, 87%, 58%);
 }
 /* Service-section-end */
+/* Skill-section-start */
+.skill {
+  padding: 4rem 0;
+}
+.progress {
+  max-width: 32rem;
+  width: 100%;
+  height: 1rem;
+  background: var(--leight);
+  border-radius: 0.5rem;
+}
+.skill-headding {
+  font-size: 2rem;
+  font-weight: 500;
+  display: block;
+  padding: 1rem 0;
+}
+.progress .progress-inner {
+  width: 0;
+  height: 100%;
+  left: 0;
+  background: var(--primary);
+  border-radius: inherit;
+  position: relative;
+  /* transition: all 5s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+}
+.progress-inner::before {
+  position: absolute;
+  content: attr(data-progress);
+  height: 2.5rem;
+  width: 5rem;
+  right: 0;
+  top: -3.5rem;
+  text-align: center;
+  line-height: 2.5rem;
+  background: var(--bg-primary);
+  color: var(--white);
+  border-radius: inherit;
+}
+.progress-inner::after {
+  position: absolute;
+  content: '';
+  right: 1rem;
+  bottom: 0.4rem;
+  border-top: 1rem solid var(--bg-primary);
+  border-right: 1rem solid transparent;
+  border-left: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+}
+/* Skill-section-end */
