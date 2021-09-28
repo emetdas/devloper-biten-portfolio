@@ -51,6 +51,15 @@ div {
 .heading {
   font-size: 4rem;
 }
+.p-2 {
+  padding: 2rem;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.px-2 {
+  padding: 0 2rem;
+}
 .subheading {
   font-size: 3rem;
 }
