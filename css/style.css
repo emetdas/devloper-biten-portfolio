@@ -256,11 +256,14 @@ header {
 }
 
 .skill-container {
-  place-items: center;
+  align-items: center;
+  gap: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
 }
-.skill-img {
+.skill-images {
   width: 100%;
+  max-height: 40rem;
+  /* height: 30rem; */
 }
 .progress {
   max-width: 32rem;
