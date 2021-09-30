@@ -340,7 +340,6 @@ header {
   position: absolute;
   left: -4rem;
   top: 50%;
-  /* bottom: 0.5rem; */
   width: 3.5rem;
   height: 0.2rem;
   background: var(--text-dark);
