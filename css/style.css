@@ -331,7 +331,7 @@ header {
 }
 .about-heading {
   position: relative;
-  margin-left: 3.5rem;
+  margin-left: 4rem;
   font-size: 4rem;
   color: var(--primary);
 }
