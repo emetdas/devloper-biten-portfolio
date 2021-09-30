@@ -61,6 +61,9 @@ div {
 .px-2 {
   padding: 0 2rem;
 }
+.mx-1 {
+  margin-right: 1rem;
+}
 .subheading {
   font-size: 3rem;
 }
@@ -96,6 +99,12 @@ div {
   display: inline-block;
   color: var(--white);
   background: var(--primary);
+}
+.btn-secondary {
+  padding: 0.6rem 1.7rem;
+  display: inline-block;
+  color: var(--white);
+  background: var(--bg-primary);
 }
 /* Home-section-start */
 header {
@@ -311,3 +320,30 @@ header {
   border-bottom: 1rem solid transparent;
 }
 /* Skill-section-end */
+/* About-section-start */
+.about {
+  padding: 4rem 0;
+}
+.about-container {
+  align-items: center;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+}
+.about-heading {
+  position: relative;
+  margin-left: 3.5rem;
+  font-size: 4rem;
+  color: var(--primary);
+}
+.about-heading::before {
+  content: ' ';
+  position: absolute;
+  left: -4rem;
+  top: 50%;
+  /* bottom: 0.5rem; */
+  width: 3.5rem;
+  height: 0.2rem;
+  background: var(--text-dark);
+  border-radius: 0.3rem;
+}
+/* About-section-end */

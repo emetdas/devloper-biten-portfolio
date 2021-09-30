@@ -20,6 +20,19 @@ nav_link.forEach((e) => {
 let progress = document.querySelectorAll('.progress-inner');
 progress.forEach((e) => {
   let { progress } = e.dataset;
-  e.style.width = progress;
+  e.style.width = `${progress}`;
+  // const update = () => {
+  //   let { per } = e.dataset;
+  //   per = 10;
+  //   let target = +progress;
+  //   let count = +per;
+  //   let inc = target / speed;
+  //   if (count < target) {
+  //     per += Math.floor(count + inc);
+  //     setTimeout(update, 1);
+  //   } else {
+  //     per = target;
+  //   }
+  // };
 });
 // skill-prigress-end
