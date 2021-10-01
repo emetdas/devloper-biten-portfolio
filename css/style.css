@@ -364,19 +364,65 @@ header {
   padding: 0.4rem 1.5rem;
   margin: 0 1rem;
 }
+.project-menu {
+  margin-top: 3rem;
+}
 .Project-items {
   margin-top: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  /* grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr)); */
   gap: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .project-item {
-  width: 29rem;
+  max-width: 29rem;
+  width: 100%;
   height: 35rem;
   background: var(--white);
   box-shadow: var(--box-shadow-default);
   float: left;
-  /* margin-right: 3rem; */
+  position: relative;
+  overflow: hidden;
+}
+.project-image {
+  object-fit: cover;
+  width: 100%;
+  height: 25rem;
+}
+.project-title {
+  padding: 1rem;
+}
+.projct-back-part {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  transform: scale(0);
+  background: hsla(244, 78%, 67%, 0.8);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in;
+}
+.project-item:hover > .projct-back-part {
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.projct-back-part i {
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  border-radius: 50%;
+  background: var(--white);
+  cursor: pointer;
 }
 /* project-section-end */
