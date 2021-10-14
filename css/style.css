@@ -385,15 +385,23 @@ header {
   position: relative;
   overflow: hidden;
 }
-.project-image {
+.project-font-part{
   width: 100%;
   height: 30rem;
-  object-fit: contain;
+}
+.project-image-container {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.project-image-container .project-image {
+  width: 100%;
+  background-size: cover;
 }
 .project-title {
   padding: 2rem 1rem;
 }
-.projct-back-part {
+.project-back-part {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -408,7 +416,7 @@ header {
   justify-content: center;
   transition: all 0.5s ease-in;
 }
-.project-item:hover > .projct-back-part {
+.project-item:hover > .project-back-part {
   transform: scale(1);
   width: 100%;
   height: 30rem;
@@ -417,7 +425,7 @@ header {
   bottom: 50px;
   right: 0;
 }
-.projct-back-part i {
+.project-back-part i {
   width: 4rem;
   height: 4rem;
   line-height: 4rem;
